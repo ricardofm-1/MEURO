@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEURO ($MEURO) — Digital Euro Memecoin</title>
+  <meta name="description" content="MEURO is the digital euro memecoin that launched first. Satirical $MEURO reward token paired with EURC. Not money. Just a joke with a chart." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="theme-color" content="#003399" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="application-name" content="MEURO" />
+  <link rel="canonical" id="canonical" href="./" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MEURO" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="MEURO ($MEURO) — Digital Euro Memecoin" />
+  <meta property="og:description" content="The digital euro that actually launched. Satirical reward memecoin paired with EURC." />
+  <meta property="og:url" id="og-url" content="./" />
+  <meta property="og:image" id="og-image" content="assets/meuro-hero.png" />
+  <meta property="og:image:alt" content="MEURO mascot — the digital euro that launched first" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MEURO ($MEURO) — Digital Euro Memecoin" />
+  <meta name="twitter:description" content="The digital euro that actually launched. Satirical reward memecoin paired with EURC." />
+  <meta name="twitter:image" id="tw-image" content="assets/meuro-hero.png" />
+
+  <script type="application/ld+json" id="jsonld">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "MEURO",
+        "alternateName": ["$MEURO", "Digital Euro Memecoin"],
+        "url": "/",
+        "description": "Satirical digital euro memecoin paired with EURC.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "name": "MEURO",
+        "alternateName": "Digital Euro Memecoin",
+        "url": "/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/favicon-512x512.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Satirical memecoin. Not affiliated with the ECB, the EU, or Circle."
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --ink: #fff6e8;
+      --muted: #b9a48a;
+      --gold: #f5c31a;
+      --gold-2: #ffe56a;
+      --eu: #003399;
+      --eu-2: #1e5ad1;
+      --card: #101010;
+      --line: rgba(245, 195, 26, 0.22);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Outfit, system-ui, sans-serif;
+      line-height: 1.55;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 20% 0%, rgba(0, 51, 153, 0.28), transparent 42%),
+        radial-gradient(ellipse at 80% 10%, rgba(245, 195, 26, 0.12), transparent 40%);
+      z-index: 0;
+    }
+
+    .wrap { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+
+    .wordmark span:first-child { color: var(--eu); }
+    .wordmark span:nth-child(n+2) { color: var(--gold); }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #000;
+      border: 2px solid #fff;
+    }
+
+    .brand .wordmark {
+      font-family: Bungee, sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      -webkit-text-stroke: 3px #111;
+      paint-order: stroke fill;
+    }
+
+    nav { display: flex; gap: 18px; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav a:hover { color: var(--gold-2); }
+
+    .tape {
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      background: var(--gold);
+      color: #111;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: Bungee, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    .tape-track {
+      display: inline-block;
+      padding: 10px 0;
+      animation: slide 28s linear infinite;
+    }
+
+    @keyframes slide {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+      padding: 54px 0 36px;
+    }
+
+    .hero-art {
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-art img {
+      width: min(520px, 100%);
+      filter: drop-shadow(0 24px 40px rgba(0, 51, 153, 0.35));
+    }
+
+    .kicker {
+      display: inline-block;
+      background: var(--eu);
+      color: #fff;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border: 3px solid #fff;
+      margin-bottom: 16px;
+      transform: rotate(-2deg);
+    }
+
+    h1 {
+      font-family: Bungee, sans-serif;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 0.95;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    h1 .gold { color: var(--gold); }
+    h1 .rust { color: var(--eu-2); }
+
+    .lede {
+      font-size: 18px;
+      color: #f0e2cc;
+      max-width: 34em;
+      margin-bottom: 26px;
+    }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      border: 3px solid #fff;
+      box-shadow: 4px 4px 0 #fff;
+    }
+
+    .btn-gold { background: var(--gold); color: #111; }
+    .btn-rust { background: var(--eu); color: #fff; }
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #fff; }
+
+    .race { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 520px; }
+
+    .race article {
+      background: var(--card);
+      border: 3px solid #fff;
+      padding: 14px 16px;
+    }
+
+    .race small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .race strong {
+      font-family: Bungee, sans-serif;
+      font-size: 22px;
+      color: var(--gold);
+    }
+
+    .section { padding: 28px 0 70px; }
+
+    h2 {
+      font-family: Bungee, sans-serif;
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1;
+      margin: 12px 0 22px;
+      text-transform: uppercase;
+    }
+
+    .grid-3, .grid-2 { display: grid; gap: 16px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: 1.15fr 0.85fr; }
+
+    .card {
+      background: var(--card);
+      border: 3px solid #fff;
+      padding: 22px;
+      box-shadow: 6px 6px 0 var(--gold);
+    }
+
+    .card.rust { box-shadow: 6px 6px 0 var(--eu); }
+
+    .card h3 {
+      font-family: Bungee, sans-serif;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--gold);
+    }
+
+    .card p, .card li { color: #ead9c0; }
+    .card ol { padding-left: 18px; }
+    .card li + li { margin-top: 10px; }
+
+    .ca-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 16px;
+      padding: 14px 16px;
+      background: #000;
+      border: 3px dashed var(--gold);
+    }
+
+    .ca-box code {
+      font-size: 14px;
+      word-break: break-all;
+      color: var(--gold-2);
+    }
+
+    button.copy {
+      background: var(--gold);
+      color: #111;
+      border: 3px solid #fff;
+      padding: 8px 12px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    footer {
+      border-top: 3px solid #fff;
+      padding: 28px 0 48px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer strong {
+      display: block;
+      color: var(--gold);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 860px) {
+      nav { display: none; }
+      .hero, .grid-3, .grid-2, .race { grid-template-columns: 1fr; }
+      .hero { padding-top: 18px; }
+      h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">
+        <img src="assets/meuro-token.png" alt="MEURO logo" width="44" height="44" />
+        <span class="wordmark" aria-label="MEURO"><span>M</span><span>E</span><span>U</span><span>R</span><span>O</span></span>
+      </a>
+      <nav>
+        <a href="#lore">Lore</a>
+        <a href="#rewards">EURC</a>
+        <a href="#contract">CA</a>
+      </nav>
+    </header>
+  </div>
+
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <span> OFFICIAL DIGITAL EURO · NOT ISSUED · 2029 MAYBE · $MEURO · ALREADY PRICED · PAIRED WITH EURC · HOLDERS GET EUROS · </span>
+      <span> OFFICIAL DIGITAL EURO · NOT ISSUED · 2029 MAYBE · $MEURO · ALREADY PRICED · PAIRED WITH EURC · HOLDERS GET EUROS · </span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero" id="top">
+      <div>
+        <p class="kicker">Digital Euro Memecoin</p>
+        <h1>Issued before<br /><span class="gold">the issuer.</span></h1>
+        <p class="lede">
+          Frankfurt has been designing a digital euro since 2021. First print is still a 2029 rumour.
+          $MEURO did not wait. Same joke, live chart, paired with EURC — so when people trade,
+          holders get paid in euro stables.
+        </p>
+        <div class="actions">
+          <a class="btn btn-gold" id="trade-link" href="https://www.stonkfun.xyz/" target="_blank" rel="noreferrer">Trade on StonkFun</a>
+          <a class="btn btn-rust" href="#rewards">How the euros pay</a>
+        </div>
+        <div class="race">
+          <article>
+            <small>Official digital euro</small>
+            <strong>Not issued</strong>
+          </article>
+          <article>
+            <small>$MEURO market cap</small>
+            <strong>Already priced</strong>
+          </article>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/meuro-hero.png" alt="MEURO mascot with gold euro character and MEURO wordmark" width="520" height="520" />
+      </div>
+    </section>
+
+    <section class="section" id="lore">
+      <p class="kicker">The lore</p>
+      <h2>He left the committee.</h2>
+      <div class="grid-2">
+        <article class="card">
+          <h3>A short history of waiting</h3>
+          <ol>
+            <li>2021: the ECB opens the investigation. Papers, panels, no coin.</li>
+            <li>2026: still in trilogue. A pilot is hoped for in 2027. Retail, if the law holds, in 2029.</li>
+            <li>$MEURO is the digital euro memecoin that shipped first. Ticker MEURO. Crown on. Chain on.</li>
+            <li>The mandate is public: stay richer than the official digital euro. Until they press the button, that means staying above zero.</li>
+            <li>Paired with Circle EURC. Volume prints euro stables to holders. Theirs will be programmable, capped, and late. This one already circulates.</li>
+          </ol>
+        </article>
+        <article class="card rust">
+          <h3>The thesis</h3>
+          <p>
+            A central-bank digital euro is a liability, not a ticker. It may never get a market cap.
+            That is the punchline. $MEURO is already a market. Theirs is still a file.
+            If they launch, the race starts. If they stall, we remain the only digital euro with a chart.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="rewards">
+      <p class="kicker">The bag</p>
+      <h2>Holders get <span class="gold" style="color:var(--gold)">EURC</span>.</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Reward coin</h3>
+          <p>StonkFun reward mode puts a transfer tax on every transfer, on any venue. That pot goes to holders, not the creator.</p>
+        </article>
+        <article class="card rust">
+          <h3>Paid in the pair</h3>
+          <p>Quoted against EURC, so the split arrives as Circle euro stablecoin, pro-rata. Not more MEURO. Actual euros-onchain.</p>
+        </article>
+        <article class="card">
+          <h3>Volume is the printer</h3>
+          <p>No trades, no tax, no euros. Not a savings account. A meme that pays when the market moves.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contract">
+      <p class="kicker">The mint</p>
+      <h2>Contract address</h2>
+      <article class="card">
+        <p>Paste the CA here the second the pool is live. Until then this vault is empty and Frankfurt is still talking.</p>
+        <div class="ca-box">
+          <code id="ca">CA coming after launch</code>
+          <button class="copy" type="button" id="copy-ca">Copy</button>
+        </div>
+      </article>
+    </section>
+
+  </main>
+  <div class="wrap">
+    <footer>
+      <strong>This is a memecoin. It has no intrinsic value.</strong>
+      $MEURO is a joke token made for fun. It is not money, not an investment, not legal tender, and not affiliated with the ECB, the European Union, or Circle.
+      This site is not financial advice. Nothing here is an offer to buy or sell anything. You can lose everything. Reward payouts, if any, depend on StonkFun’s mechanism and real trading — they are not guaranteed.
+      The only goal is to laugh at a digital euro that has not launched yet. Do your own research. Don’t ape what you can’t lose.
+    </footer>
+  </div>
+
+  <script>
+    // After deploy, set SITE_ORIGIN to your live domain, e.g. "https://meuro.xyz"
+    // Leave blank to use the current host. Also paste the mint after launch.
+    const SITE_ORIGIN = "";
+    const CA = "";
+    const STONKFUN_TOKEN_URL = "https://www.stonkfun.xyz/";
+
+    const origin = (() => {
+      if (SITE_ORIGIN) return SITE_ORIGIN.replace(/\/$/, "");
+      const path = window.location.pathname.replace(/index\.html$/, "").replace(/\/$/, "");
+      return window.location.origin + path;
+    })();
+    const abs = (path) => origin + (path.startsWith("/") ? path : "/" + path);
+    const set = (id, attr, value) => {
+      const node = document.getElementById(id);
+      if (node) node.setAttribute(attr, value);
+    };
+    set("canonical", "href", abs("/"));
+    set("og-url", "content", abs("/"));
+    set("og-image", "content", abs("/assets/meuro-hero.png"));
+    set("tw-image", "content", abs("/assets/meuro-hero.png"));
+    const ld = document.getElementById("jsonld");
+    if (ld) {
+      const data = JSON.parse(ld.textContent);
+      data["@graph"].forEach((item) => {
+        if (item.url === "/") item.url = abs("/");
+        if (item.logo && item.logo.url) item.logo.url = abs("/favicon-512x512.png");
+      });
+      ld.textContent = JSON.stringify(data);
+    }
+
+    const caNode = document.getElementById("ca");
+    const trade = document.getElementById("trade-link");
+    if (CA) caNode.textContent = CA;
+    if (STONKFUN_TOKEN_URL) trade.href = STONKFUN_TOKEN_URL;
+
+    document.getElementById("copy-ca").addEventListener("click", async () => {
+      const value = CA || caNode.textContent;
+      try {
+        await navigator.clipboard.writeText(value);
+        document.getElementById("copy-ca").textContent = "Copied";
+      } catch {
+        document.getElementById("copy-ca").textContent = "Copy failed";
+      }
+    });
+  </script>
+</body>
+</html>

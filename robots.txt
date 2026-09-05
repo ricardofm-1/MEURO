@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ricardofm-1.github.io/MEURO/sitemap.xml
